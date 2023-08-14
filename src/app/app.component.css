@@ -1,0 +1,14 @@
+#nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    padding-top: 15px;
+    box-shadow: 0px 0px 8px 0px;
+  
+  }
+  .app-component {
+    display: flex;
+    flex-direction: column;
+  }
