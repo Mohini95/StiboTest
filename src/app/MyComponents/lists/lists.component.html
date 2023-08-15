@@ -17,7 +17,11 @@
     Select All
   </label>
 
+  <div *ngIf="isLoading" class="spinner">
+    <mat-spinner></mat-spinner>
+  </div>
 
+  <div *ngIf="!isLoading">
   <div *ngIf="!noItemsFound" class="items-container">
   <div *ngFor="let item of items" class="list-container">
     <label>
@@ -27,7 +31,7 @@
     <div *ngIf="itemType === 'countries'" class="list-item">
         <img *ngIf="item.flag" [src]="item.flag" alt="{{ item.name }} Flag" data-placement="top"
         class="flag" data-toggle="tooltip" title="{{item.name}}">
-        <div class="country-data">
+        <div class="list-data">
           <div>
             <p>{{ item.name }}</p>
             <p>{{ item.code }}</p>
@@ -39,22 +43,29 @@
     </div>
 
     <!-- For payments -->
-    <div *ngIf="itemType === 'payments'" class="card">
+    <div *ngIf="itemType === 'payments'" class="list-item">
       <div class="card-body">
         <p class="payments-text">{{ item.status }}</p>
       </div>
     </div>
 
     <!-- For users -->
-    <div *ngIf="itemType === 'users'">
-      <img *ngIf="item.avatarUrl" [src]="item.avatarUrl" alt="{{ item.firstName }} {{ item.lastName }} Avatar" 
-      class="avatar" data-toggle="tooltip" title="{{item.firstName}}">
-      <p>{{ item.firstName }} {{ item.lastName }}</p>
-      <p>{{ item.email }}</p>
+    <div *ngIf="itemType === 'users'" class="list-item">
+      <div class="list-data">
+        <div>
+          <p>{{ item.firstName }} {{ item.lastName }}</p>
+          <p>{{ item.email }}</p>
+        </div>
+        <div>
+          <img *ngIf="item.avatarUrl" [src]="item.avatarUrl" alt="{{ item.firstName }} {{ item.lastName }} Avatar" 
+          class="avatar" data-toggle="tooltip" title="{{item.firstName}}">
+        </div>
+      </div>
     </div>
 
     
   </div>
  </div>
+</div>
 
 </div>

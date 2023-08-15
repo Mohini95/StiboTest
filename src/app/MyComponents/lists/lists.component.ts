@@ -17,12 +17,13 @@ export class ListsComponent implements OnInit {
   allItems: any[] = [];
   currentIndex: number = 0;
   noItemsFound: boolean = false;
+  isLoading: boolean = true;
 
   searchControl = new FormControl('');
   selectAllChecked: boolean = false;
 
   ngOnInit() {
-
+    this.isLoading = true;
    this.allItems = this.items;
     this.searchControl.valueChanges
       .pipe(
@@ -32,6 +33,7 @@ export class ListsComponent implements OnInit {
       .subscribe((newValue:any) => {
         this.filterItems(newValue);
       });
+      this.isLoading = false;
   }
 
   toggleSelectAll() {

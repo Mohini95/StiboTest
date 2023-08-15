@@ -87,10 +87,16 @@
   text-transform: capitalize;
   
 }
-  
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust height as needed */
+}
+
 
   
-.country-data {
+.list-data {
   width: 100%;
   display: flex;
   flex-direction: row;
