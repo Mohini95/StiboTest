@@ -1,4 +1,4 @@
-
+/*
   .list-container {
     display: flex;
   }
@@ -70,7 +70,7 @@
     color: red;
   }
 
-  /* Styling for tooltips */
+ 
 .mat-tooltip {
   color: white;
   border-radius: 4px;
@@ -79,7 +79,7 @@
 }
 
 .items-container {
-  max-height: 400px; /* Adjust the desired height */
+  max-height: 400px; 
   overflow-y: auto;
 }
 
@@ -87,6 +87,7 @@
   text-transform: capitalize;
   
 }
+*/
   
 
   

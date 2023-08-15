@@ -1,1 +1,42 @@
-<p>reusable-list works!</p>
+<!-- reusable-list.component.html -->
+
+<div class="list-container">
+    <h2>{{ itemType | titlecase }}fdc</h2>
+  
+    
+  
+    <label *ngIf="displayedItems.length > 0">
+      <input type="checkbox" [checked]="selectAllChecked" (change)="toggleSelectAll()" />
+      Select All
+    </label>
+  
+    <div *ngIf="displayedItems.length === 0" class="no-items">
+      No items found
+    </div>
+  
+    <div *ngIf="displayedItems.length > 0" class="items-container">
+      <div class="list-item" *ngFor="let item of displayedItems">
+        <label>
+          <input type="checkbox" [checked]="item.selected" (change)="itemSelectionChanged(item)" />
+        </label>
+         <!--  for countries -->
+            
+
+             <!-- For payments -->
+    <div *ngIf="itemType === 'payments'" class="card">
+        <div class="card-body">
+          <p class="payments-text">{{ item.status }}</p>
+        </div>
+   </div>
+  
+      <!-- For users -->
+      <div *ngIf="itemType === 'users'">
+        <img *ngIf="item.avatarUrl" [src]="item.avatarUrl" alt="{{ item.firstName }} {{ item.lastName }} Avatar" 
+        class="avatar" data-toggle="tooltip" title="{{item.firstName}}">
+        <p>{{ item.firstName }} {{ item.lastName }}</p>
+        <p>{{ item.email }}</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  

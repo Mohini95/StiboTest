@@ -1,3 +1,4 @@
+<!--
 <div class="list">
   
   <h2>Manage {{ itemType | titlecase }}</h2>
@@ -23,29 +24,28 @@
     <label>
       <input type="checkbox" [checked]="item.selected" (change)="itemSelectionChanged(item)" />
     </label>
-    <!--  for countries -->
-    <div *ngIf="itemType === 'countries'" class="list-item">
+    
+    <div *ngIf="itemType === 'countries'" >
         <img *ngIf="item.flag" [src]="item.flag" alt="{{ item.name }} Flag" data-placement="top"
         class="flag" data-toggle="tooltip" title="{{item.name}}">
-        <div class="country-data">
+        <div >
           <div>
             <p>{{ item.name }}</p>
             <p>{{ item.code }}</p>
           </div>
-          <div class="country-count">
+          <div >
             <p>{{ item.someWeirdServerFieldNameWithCount }}</p>
           </div>
         </div>
     </div>
 
-    <!-- For payments -->
     <div *ngIf="itemType === 'payments'" class="card">
       <div class="card-body">
         <p class="payments-text">{{ item.status }}</p>
       </div>
     </div>
 
-    <!-- For users -->
+    
     <div *ngIf="itemType === 'users'">
       <img *ngIf="item.avatarUrl" [src]="item.avatarUrl" alt="{{ item.firstName }} {{ item.lastName }} Avatar" 
       class="avatar" data-toggle="tooltip" title="{{item.firstName}}">
@@ -58,3 +58,4 @@
  </div>
 
 </div>
+-->

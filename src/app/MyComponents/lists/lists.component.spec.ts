@@ -1,3 +1,4 @@
+/* Angular cli
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListsComponent } from './lists.component';
@@ -32,3 +33,4 @@ describe('ListsComponent', () => {
   });
 
 });
+*/

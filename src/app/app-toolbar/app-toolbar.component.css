@@ -1,0 +1,23 @@
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 16px;
+  }
+  :host {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Make sure it's on top of other content */
+  }
+  
+  .mat-toolbar {
+    background-color: #1976d2; /* Customize the background color as needed */
+    color: white; /* Customize the text color as needed */
+  }
+  
+  
+  
+  
+  
